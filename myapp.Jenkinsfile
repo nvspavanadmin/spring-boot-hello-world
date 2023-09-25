@@ -1,7 +1,7 @@
 pipeline {
    agent any
     environment {
-        def scannerHome = tool 'sonarScanner5.0.1'
+        def scannerHome = tool 'sonarscanner5.0.1'
     }
    stages {
         stage("Build"){
@@ -22,7 +22,7 @@ pipeline {
 
         stage("Code Analysis"){
             steps {
-                withSonarQubeEnv('mysonarQube') {
+                withSonarQubeEnv('mysonarqube') {
                     sh """ ${scannerHome}/bin/sonar-scanner \
                     -Dsonar.projectKey=spring-boot-hello-world \
                     -Dsonar.projectName=spring-boot-hello-world \
