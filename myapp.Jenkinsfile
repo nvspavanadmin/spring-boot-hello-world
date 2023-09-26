@@ -22,7 +22,7 @@ pipeline {
 
         stage("Code Analysis"){
             steps {
-                withSonarQubeEnv('mysonarqube/') {
+                withSonarQubeEnv('mysonarqube') {
                     sh """ ${scannerHome}/bin/sonar-scanner \
                     -Dsonar.projectKey=spring-boot-hello-world \
                     -Dsonar.projectName=spring-boot-hello-world \
