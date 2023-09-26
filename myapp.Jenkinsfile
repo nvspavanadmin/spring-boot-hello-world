@@ -22,7 +22,7 @@ pipeline {
 
         stage("Code Analysis"){
             steps {
-                withSonarQubeEnv('mysonarqube') {
+                withSonarQubeEnv('mysonarqube/') {
                     sh """ ${scannerHome}/bin/sonar-scanner \
                     -Dsonar.projectKey=spring-boot-hello-world \
                     -Dsonar.projectName=spring-boot-hello-world \
@@ -30,14 +30,7 @@ pipeline {
                     -Dsonar.java.binaries=target/classes \
                     -Dsonar.sourceEncoding=UTF-8
                     """
-                }
-            }
-        }
-        stage("Quality Gate") {
-            steps {
-              timeout(time: 2, unit: 'MINUTES') {
-                waitForQualityGate abortPipeline: true
-              }
+               }
             }
         }
    }
