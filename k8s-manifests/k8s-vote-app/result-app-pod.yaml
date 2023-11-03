@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: result-app
+   labels:
+     type: frontend
+     app: result-app
+spec:
+   containers:
+     - name:  result-app-container
+       image: vsiraparapu/result-app
