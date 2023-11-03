@@ -9,3 +9,5 @@ spec:
    containers:
      - name:  vote-app-container
        image: vsiraparapu/voting-app
+       ports:
+         - containerPort: 80

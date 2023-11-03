@@ -9,3 +9,5 @@ spec:
    containers:
      - name:  result-app-container
        image: vsiraparapu/result-app
+       ports:
+         - containerPort: 80
