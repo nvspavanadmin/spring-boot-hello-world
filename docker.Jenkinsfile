@@ -24,7 +24,7 @@ pipeline {
                   docker push vsiraparapu/hello-world:latest
                   docker tag vsiraparapu/hello-world:latest vsiraparapu/hello-world:${BUILD_NUMBER}-slim-bullseye
                   docker push vsiraparapu/hello-world:${BUILD_NUMBER}-slim-bullseye
-                
+                  docker rmi vsiraparapu/hello-world:${BUILD_NUMBER}-slim-bullseye
                 """
             }
         }
