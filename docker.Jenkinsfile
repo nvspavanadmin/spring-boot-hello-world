@@ -23,7 +23,7 @@ pipeline {
                   docker login -u vsiraparapu -p dckr_pat_d2Ze8mBpKEfPeVQMsF__XH_-ynI
                   docker push vsiraparapu/hello-world:latest
                   docker tag vsiraparapu/hello-world:latest vsiraparapu/hello-world:${BUILD_NUBER}
-                  docker push vsiraparapu/hello-world:${BUILD_NUBER}
+                  docker push vsiraparapu/hello-world:${BUILD_NUMBER}
                 
                 """
             }
