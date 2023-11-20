@@ -16,14 +16,18 @@ pipeline {
             }
         }
     }
-    // stage('pushImageRegistry'){
-    //     steps {
-    //         script {
-    //             sh "docker push vsiraparapu/hello-world:latest"
-    //         }
-    //     }
-    // }
+    stage('pushImageRegistry'){
+        steps {
+            script {
+                sh """
+                  docker login -u vsiraparapu -p dckr_pat_d2Ze8mBpKEfPeVQMsF__XH_-ynI
+                  docker push vsiraparapu/hello-world:latest
+                
+                """
+            }
+        }
+    }
 
   }
-  
+
 }
