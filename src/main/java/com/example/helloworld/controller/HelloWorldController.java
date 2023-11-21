@@ -19,7 +19,7 @@ public class HelloWorldController {
         return "Hello, World!3";
     }
      @GetMapping("/hello4")
-    public String sendGreetings3() {
+    public String sendGreetings4() {
         return "Hello, World!4";
     }
 }
