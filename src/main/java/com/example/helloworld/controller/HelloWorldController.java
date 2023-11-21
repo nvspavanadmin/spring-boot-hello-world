@@ -18,4 +18,8 @@ public class HelloWorldController {
     public String sendGreetings3() {
         return "Hello, World!3";
     }
+     @GetMapping("/hello4")
+    public String sendGreetings3() {
+        return "Hello, World!4";
+    }
 }
