@@ -34,9 +34,9 @@ pipeline {
         steps{
             script {
                 sh """
-                   export KUBECONFIG=/path
+                   export KUBECONFIG=/home/harsha/config/config
                    kubectl config get-contexts
-                   kubectl config use-context
+                   kubectl config use-context kubernetes-admin@kubernetes
                    kubectl apply -f deploy-k8s/hello-world-deploy.yaml
                    kubectl apply -f deploy-k8s/hello-world-svc.yaml
                 """
