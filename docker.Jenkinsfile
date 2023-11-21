@@ -30,6 +30,19 @@ pipeline {
             }
         }
     }
+    stage('Deploy k8s') {
+        steps{
+            script {
+                sh """
+                   export KUBECONFIG=/path
+                   kubectl config get-contexts
+                   kubectl config use-context
+                   kubectl apply -f deploy-k8s/hello-world-deploy.yaml
+                   kubectl apply -f deploy-k8s/hello-world-svc.yaml
+                """
+            }
+        }
+    }
     // stage('imageBuild'){
     //     steps {
     //         script {
