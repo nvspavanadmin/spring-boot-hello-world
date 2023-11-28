@@ -21,7 +21,7 @@ pipeline {
             script {
                 sh """
                 docker login -u nvspavan345 -p dckr_pat_1y0_UEvGxAa6g6oRbZB3xIdWtRk
-                docker push  20l35a0114/hello-world:latest
+                docker push  nvspavan345/hello-world:latest
                 """
                }  
             }
