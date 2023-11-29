@@ -22,6 +22,8 @@ pipeline {
                 sh """
                 docker login -u nvspavan345 -p dckr_pat_1y0_UEvGxAa6g6oRbZB3xIdWtRk
                 docker push  nvspavan345/hello-world:latest
+                docker tag nvspavan345/hello-world:latest nvspavan345/hello-world:${BUILD_NUMBER}
+                docker push nvspavan345/hello-world:${BUILD_NUMBER}
                 """
                }  
             }
